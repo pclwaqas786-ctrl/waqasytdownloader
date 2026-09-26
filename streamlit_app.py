@@ -42,7 +42,7 @@ def fmt_duration(sec):
 
 
 def build_options(info):
-    opts = [{"label": "Best quality", "spec": "best", "kind": "video"}]
+    opts = [{"label": "Best quality", "spec": "bv*+ba/b", "kind": "video"}]
     seen = set()
     for f in sorted(info.get("formats") or [], key=lambda x: (x.get("height") or 0), reverse=True):
         if f.get("vcodec") in (None, "none") or f.get("acodec") in (None, "none"):
